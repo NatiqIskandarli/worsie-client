@@ -1,17 +1,9 @@
+import React, { Suspense, lazy } from 'react';
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const Sidebar = lazy(() => import('@/components/Sidebar'));
+const NavigationBar = lazy(() => import('@/components/NavigationBar'));
+const Container = lazy(() => import('@/components/Container'));
+import './globals.css';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,14 +12,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body>
+    <Suspense fallback={<div>Loading...</div>}>    
+        <div className="flex h-screen">
+          <Sidebar />          
+          <Container className="flex-1 flex flex-col bg-gray-50">
+          <Suspense fallback={<div>Loading Navigation...</div>}>
+            <NavigationBar />
+          </Suspense>
+            {children}
+          </Container>
+        </div>      
+    </Suspense>
+    </body>
     </html>
   );
 }

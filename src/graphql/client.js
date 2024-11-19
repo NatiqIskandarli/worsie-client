@@ -1,0 +1,1 @@
+// client.js - Auto-generated placeholder

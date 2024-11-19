@@ -1,0 +1,98 @@
+
+.advance-search-page {
+  padding: 24px;  
+  margin: 0;
+  margin-left: 24px;
+}
+
+.advance-search-page .ant-card .ant-card-body{
+  max-width: 800px;
+}
+
+.advance-search-page .header-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.advance-search-page .back-button {
+  padding: 4px 8px;
+  color: #000;
+  font-size: 16px;
+  height: 32px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  
+
+}
+
+.advance-search-page .back-button:hover {
+  color: #1677ff;
+  background: transparent;
+}
+
+.advance-search-page .back-button .anticon {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.advance-search-page .back-button span:last-child {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.advance-search-page .page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.advance-search-page .search-input {
+  margin-bottom: 24px;
+}
+
+.advance-search-page .toggle-options {
+  margin-bottom: 24px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.advance-search-page .tolerance-count {
+  margin-left: 8px;
+  padding: 2px 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.advance-search-page .radio-group {
+  margin-top: 16px;
+}
+
+.advance-search-page .search-criteria {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.advance-search-page .criteria-select {
+  margin-right: 8px;
+}
+
+.advance-search-page .search-criteria label {
+  font-weight: 500;
+  color: #4B5563;
+}
+
+.advance-search-page .criteria-icon-btn {
+  color: #666;
+}
+
+.advance-search-page .form-footer button {
+  background-color: var(--primary-color);
+  font-weight: bold;
+}

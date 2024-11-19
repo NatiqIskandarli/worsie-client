@@ -1,0 +1,22 @@
+.settings-page {
+    padding: 24px;
+    background-color: #f9f9f9;
+  }
+  
+  .settings-card {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .settings-card h4 {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  .ant-btn {
+    margin-top: 10px;
+    background-color: var(--primary-color) !important;
+  }
